@@ -8,7 +8,7 @@ title = "else{break}"
 theme = "cactus"
 
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = "your_google_analytics_code"
+googleAnalytics = "UA-70151012-4"
 hasCJKLanguage = true
 
 [params]
