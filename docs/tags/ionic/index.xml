@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ionic on else{break}</title>
+    <link>http://elsebreak.info/tags/ionic/</link>
+    <description>Recent content in Ionic on else{break}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://elsebreak.info/tags/ionic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ionic - Datepicker &amp; Android</title>
+      <link>http://elsebreak.info/post/ionic-date-picker-android/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/ionic-date-picker-android/</guid>
+      <description>After struggling a bit on how to implement a nice looking datepicker with Ionic, I thought I&amp;rsquo;d share some details here.
+After reading a few articles, I was left with two possibilities, using a plugin (there&amp;rsquo;s a bunch of cordova ones) which would add dependencies and require to code a little, or simply using HTML5 &amp;lt;input type=&amp;quot;date&amp;quot; /&amp;gt; which seemed to be nicely supported on most mobile browsers, using the mobile&amp;rsquo;s native ui.</description>
+    </item>
+    
+  </channel>
+</rss>

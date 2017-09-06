@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System Ui on else{break}</title>
+    <link>http://elsebreak.info/tags/system-ui/</link>
+    <description>Recent content in System Ui on else{break}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Nov 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://elsebreak.info/tags/system-ui/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Dev - System UI has stopped working</title>
+      <link>http://elsebreak.info/post/android-dev-system-ui/</link>
+      <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/android-dev-system-ui/</guid>
+      <description>Alright, my first post will be about something that took me way too much time to fix. Find a TLDR version at the end of it.
+For about a month or so I&amp;rsquo;ve been working on an Android/REST project. Working with people that were new to Android, I had a great pleasure letting them doing things that bores me, like XML layouts, and basic design - including creating background images, and a logo.</description>
+    </item>
+    
+  </channel>
+</rss>

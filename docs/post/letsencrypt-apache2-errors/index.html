@@ -1,0 +1,149 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="else{break}">
+		<meta name="description" content="IT articles and experiences">
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Letsencrypt errors with new apache2 virtualhosts &middot; else{break}</title>
+		<link rel="shortcut icon" href="http://elsebreak.info/images/favicon.ico">
+		<link rel="stylesheet" href="http://elsebreak.info/css/style.css">
+		<link rel="stylesheet" href="http://elsebreak.info/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://elsebreak.info/css/font-awesome.min.css">
+		
+
+		
+		<link href="http://elsebreak.info/index.xml" rel="alternate" type="application/rss+xml" title="else{break}" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://elsebreak.info/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='http://elsebreak.info/post'>Archive</a>
+	<a href='http://elsebreak.info/tags'>Tags</a>
+	<a href='http://elsebreak.info/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="http://elsebreak.info/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Letsencrypt errors with new apache2 virtualhosts
+                    </h1>
+                    <h3>by Grégoire MOLVEAU</h3>
+                    <h2 class="headline">
+                    Jan 31, 2017 00:00
+                    · 140 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="http://elsebreak.info/tags/apache2">apache2</a>
+                          
+                              <a href="http://elsebreak.info/tags/letsencrypt">letsencrypt</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>I wanted to use letsencrypt on new virtualhosts with apache2 that didn&rsquo;t have any certificates.</p>
+
+<p>I encountered all these errors &hellip;
+- <code>The server could not connect to the client to verify the domain :: Failed to connect to x.x.x.x:443 for TLS-SNI-01 challenge</code><br />
+- <code>Server only speaks HTTP, not TLS</code><br />
+- <code>MisconfigurationError: Error while running apache2ctl graceful.</code><br />
+- <code>AH00112: Warning: DocumentRoot 
+[/var/lib/letsencrypt/tls_sni_01_page/] does not exist</code></p>
+
+<p>but these errors can be avoided 99% of the time by checking the following</p>
+
+<ul>
+<li>check that you have mod_ssl enabled :
+<code>bash
+sudo a2enmod ssl
+</code></li>
+<li>make sure that your virtualhost files have these lines :
+<code>ApacheConf
+&lt;IfModule mod_ssl.c&gt;
+&lt;VirtualHost *:443&gt;
+[...]
+SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
+SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+Include /etc/letsencrypt/options-ssl-apache.conf
+&lt;/VirtualHost&gt;
+</code></li>
+<li>check that your firewall is accepting port 443 :
+<code>bash
+sudo ufw allow 443
+</code></li>
+<li>apache configuration is correct :
+<code>bash
+sudo service apache2 reload
+sudo apachectl -t
+</code></li>
+</ul>
+
+                </section>
+            </article>
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> else{break}
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://elsebreak.info/js/jquery-2.2.4.min.js"></script>
+<script src="http://elsebreak.info/js/main.js"></script>
+<script src="http://elsebreak.info/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_code', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

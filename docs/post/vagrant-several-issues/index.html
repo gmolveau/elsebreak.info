@@ -1,0 +1,142 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="else{break}">
+		<meta name="description" content="IT articles and experiences">
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Vagrant : Several issues I ran into &middot; else{break}</title>
+		<link rel="shortcut icon" href="http://elsebreak.info/images/favicon.ico">
+		<link rel="stylesheet" href="http://elsebreak.info/css/style.css">
+		<link rel="stylesheet" href="http://elsebreak.info/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://elsebreak.info/css/font-awesome.min.css">
+		
+
+		
+		<link href="http://elsebreak.info/index.xml" rel="alternate" type="application/rss+xml" title="else{break}" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://elsebreak.info/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='http://elsebreak.info/post'>Archive</a>
+	<a href='http://elsebreak.info/tags'>Tags</a>
+	<a href='http://elsebreak.info/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="http://elsebreak.info/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Vagrant : Several issues I ran into
+                    </h1>
+                    <h3>by Christophe DOUY</h3>
+                    <h2 class="headline">
+                    Feb 23, 2016 00:00
+                    · 213 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="http://elsebreak.info/tags/vagrant">vagrant</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p><code>Lost association with VM (VirtualBox) :</code></p>
+
+<p>Running <code>vagrant up</code> isn&rsquo;t bringing up a previously created VM but is creating a new one.</p>
+
+<p><code>vagrant status</code> reports that no vm is created yet, while VirtualBox shows it still exists.</p>
+
+<p>Solution :
+A great post about this issue is the one from mobmad:
+<a href="https://github.com/mitchellh/vagrant/issues/1755">https://github.com/mitchellh/vagrant/issues/1755</a></p>
+
+<p>First, get the hash of your vm with the following command :
+<code>VBoxManage list vms</code></p>
+
+<p>If VBoxManage is not in your path, it should be something like
+<code>C:\Program Files\Oracle\VirtualBox\VBoxManage.exe</code></p>
+
+<p>Then get back to the root of your project and run the following
+<code>echo -n &quot;insert-hash-to-vm-here&quot; &gt; .vagrant/machines/default/virtualbox/id</code></p>
+
+<p>and there you go, you can <code>vagrant up</code> again and find your good old vm.</p>
+
+<p>Saved me a few hours from installing huge databases :)</p>
+
+<p><code>SSH issue on vagrant up : Error: Connection timeout. Retrying...</code></p>
+
+<p>Get your ssh key ( <code>~/.ssh/id_rsa</code> usually )
+Copy it into a new <code>insecure_private_key</code> file placed in your vagrant install directory (something like <code>C:\Users\*username*\.vagrant.d\insecure_private_key</code>)</p>
+
+<p>Log in your vm (<code>vagrant ssh</code> will still ask for a password at this step) , create an <code>authorized-keys</code> file in <code>~/.ssh</code> and copy your <code>id_rsa.pub</code> into it. Double check it&rsquo;s correctly copied (your key should be one line, check with <code>wc -l</code>)</p>
+
+<p>log out, try to log back in, it should ssh just fine :)</p>
+
+                </section>
+            </article>
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> else{break}
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://elsebreak.info/js/jquery-2.2.4.min.js"></script>
+<script src="http://elsebreak.info/js/main.js"></script>
+<script src="http://elsebreak.info/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_code', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

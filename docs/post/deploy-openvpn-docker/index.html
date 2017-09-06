@@ -1,0 +1,180 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="else{break}">
+		<meta name="description" content="IT articles and experiences">
+		<meta name="generator" content="Hugo 0.26" />
+		<title>deploy an openvpn server with docker &middot; else{break}</title>
+		<link rel="shortcut icon" href="http://elsebreak.info/images/favicon.ico">
+		<link rel="stylesheet" href="http://elsebreak.info/css/style.css">
+		<link rel="stylesheet" href="http://elsebreak.info/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://elsebreak.info/css/font-awesome.min.css">
+		
+
+		
+		<link href="http://elsebreak.info/index.xml" rel="alternate" type="application/rss+xml" title="else{break}" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://elsebreak.info/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='http://elsebreak.info/post'>Archive</a>
+	<a href='http://elsebreak.info/tags'>Tags</a>
+	<a href='http://elsebreak.info/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="http://elsebreak.info/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        deploy an openvpn server with docker
+                    </h1>
+                    <h3>by Grégoire MOLVEAU</h3>
+                    <h2 class="headline">
+                    Nov 7, 2016 00:00
+                    · 190 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="http://elsebreak.info/tags/docker">docker</a>
+                          
+                              <a href="http://elsebreak.info/tags/openvpn">openvpn</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>extracted from : <a href="http://samwize.com/2016/09/10/setup-your-own-vpn-with-docker-openvpn-and-digital-ocean/">http://samwize.com/2016/09/10/setup-your-own-vpn-with-docker-openvpn-and-digital-ocean/</a>
+and : <a href="https://github.com/giggio/docker-openvpn-arm">https://github.com/giggio/docker-openvpn-arm</a></p>
+
+<hr />
+
+<h2 id="for-arm-based-vps">for arm-based VPS</h2>
+
+<pre><code class="language-bash">OVPN_DATA=&quot;ovpn-data&quot;
+
+docker volume create --name $OVPN_DATA
+
+docker run -v $OVPN_DATA:/etc/openvpn --rm giggio/openvpn-arm ovpn_genconfig -u udp://IP_ADRESS_OR_DOMAIN
+</code></pre>
+
+<p>The next step will ask you to enter a password.</p>
+
+<pre><code class="language-bash">docker run -v $OVPN_DATA:/etc/openvpn --rm -it giggio/openvpn-arm ovpn_initpki nopass
+
+docker run -v $OVPN_DATA:/etc/openvpn -d --name openvpn -p 1194:1194/udp --cap-add=NET_ADMIN giggio/openvpn-arm
+
+docker run -v $OVPN_DATA:/etc/openvpn --rm -it giggio/openvpn-arm easyrsa build-client-full USERNAME nopass
+
+docker run -v $OVPN_DATA:/etc/openvpn --rm giggio/openvpn-arm ovpn_getclient USERNAME &gt; USERNAME.ovpn
+</code></pre>
+
+<hr />
+
+<h2 id="for-x86-vps">for x86 VPS</h2>
+
+<pre><code class="language-bash">OVPN_DATA=&quot;ovpn-data&quot;
+
+docker volume create --name $OVPN_DATA
+
+docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://IP_ADRESS_OR_DOMAIN
+</code></pre>
+
+<p>The next step will ask you to enter a password.</p>
+
+<pre><code class="language-bash">docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki  
+
+docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn  
+
+docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full USERNAME nopass
+
+docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient USERNAME &gt; USERNAME.ovpn  
+</code></pre>
+
+<hr />
+
+<p>and then you can simply download your file with :</p>
+
+<pre><code class="language-bash">python -m SimpleHTTPServer 8000
+</code></pre>
+
+<p>and access on your browser : <a href="http://IP_ADRESS_OR_DOMAIN:8000">http://IP+ADRESS+OR+DOMAIN:8000</a></p>
+
+<p>On your client you can now download the file and use it, here are some clients :</p>
+
+<ul>
+<li><p><a href="https://tunnelblick.net/">mac os openvpn client</a></p></li>
+
+<li><p><a href="http://assets.unotelly.com/downloads/apps/windows/openvpn-client.msi">windows openvpn client</a></p></li>
+
+<li><p><a href="https://doc.ubuntu-fr.org/client_openvpn">ubuntu openvpn client</a></p></li>
+</ul>
+
+                </section>
+            </article>
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> else{break}
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://elsebreak.info/js/jquery-2.2.4.min.js"></script>
+<script src="http://elsebreak.info/js/main.js"></script>
+<script src="http://elsebreak.info/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_code', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

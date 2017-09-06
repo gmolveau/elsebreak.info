@@ -1,0 +1,162 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="else{break}">
+		<meta name="description" content="IT articles and experiences">
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Android Dev - System UI has stopped working &middot; else{break}</title>
+		<link rel="shortcut icon" href="http://elsebreak.info/images/favicon.ico">
+		<link rel="stylesheet" href="http://elsebreak.info/css/style.css">
+		<link rel="stylesheet" href="http://elsebreak.info/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://elsebreak.info/css/font-awesome.min.css">
+		
+
+		
+		<link href="http://elsebreak.info/index.xml" rel="alternate" type="application/rss+xml" title="else{break}" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://elsebreak.info/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='http://elsebreak.info/post'>Archive</a>
+	<a href='http://elsebreak.info/tags'>Tags</a>
+	<a href='http://elsebreak.info/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="http://elsebreak.info/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Android Dev - System UI has stopped working
+                    </h1>
+                    <h3>by Christophe DOUY</h3>
+                    <h2 class="headline">
+                    Nov 13, 2015 00:00
+                    · 804 words
+                    · 4 minutes read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="http://elsebreak.info/tags/android">android</a>
+                          
+                              <a href="http://elsebreak.info/tags/system-ui">system-ui</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Alright, my first post will be about something that took me way too much time to fix. Find a TLDR version at the end of it.</p>
+
+<p>For about a month or so I&rsquo;ve been working on an Android/REST project. Working with people that were new to Android, I had a great pleasure letting them doing things that bores me, like XML layouts, and basic design - including creating background images, and a logo.
+Time to time, I had to merge their branches on develop, everything was fine, work was being done.</p>
+
+<p>Until that one time.</p>
+
+<p>For those that are new to Android development, you have to know one thing. It requires an Android device. If you don&rsquo;t have a physical one, well, I&rsquo;m sure your favorite IDE will allow you to create an AVD - Android Virtual Device. However, your processor architecture wasn&rsquo;t made for Android, so the AVD has to do some overwork to be able to emulate an Android Device, which translates in an AVD taking forever to start, and being terribly slow. Although Intel did some nice stuff a few years ago by releasing the SDK Tool &ldquo;Intel x86 Emulator Accelerator&rdquo;, which &hellip; accelerates your emulator, it still lacks a decent fluidity.
+Soooo, basically, you end up using your phone.</p>
+
+<p>Back to the story. There was this branch I had to merge, with new backgrounds, and a way better looking logo than the previous one. My friend ran it on its phone, great, I just needed to finish some stuff, and then I could merge everything. Got back home, merged my branch with develop, did some tests, worked fine. Switched to the last branch, merged it, fixed some conflicts, and ran it on my phone. Wow, the app was great. Then I tried to close it.</p>
+
+<p><strong>&ldquo;Unfortunately, System UI has stopped working&rdquo;.</strong></p>
+
+<p><em>Yeah what do you mean ?</em></p>
+
+<p><strong>&ldquo;Unfortunately, System UI has stopped working&rdquo;.</strong></p>
+
+<p><em>God, I can&rsquo;t close this alert, it keeps coming back. I&rsquo;ll shut my phone.</em></p>
+
+<p><strong><em>Phone reboots</em></strong></p>
+
+<p><strong>&ldquo;Unfortunately, System UI has stopped working&rdquo;.</strong></p>
+
+<p><em>Oh god that feels wrong.</em></p>
+
+<p>The almighty Internet only had 2 solutions. Wipe partition cache, meaning cleaning the applications cache data, and not really losing anything important. Of course, it didn&rsquo;t worked.
+I was left with resetting to factory settings.</p>
+
+<p>So yeah, I merged a branch, got sure code was fine, and lost all my data in 5 minutes.
+And now, I had to figure out why, and how to fix it. I launched my application in an old AVD. The app started, I clicked the home button, and the System UI crash happened. Following was the Error logged in the Android Monitor :</p>
+
+<pre><code class="language-language-java">11-12 01:51:22.335 2821-2836/com.android.systemui E/WVMExtractor: Failed to open libwvm.so: dlopen failed: library &quot;libwvm.so&quot; not found
+11-12 01:51:22.623 2821-2821/com.android.systemui E/AndroidRuntime: FATAL EXCEPTION: main
+11-12 01:51:22.623 2821-2821/com.android.systemui E/AndroidRuntime: Process: com.android.systemui, PID: 2821
+</code></pre>
+
+<p>Wow. Lacking a lib used by the systemui ? That sounds pretty bad. I tried creating a new AVD, with the latest Android API plus Google API and 1.5Gb of Ram. Same thing happened.
+I tried back develop&rsquo;s previous version. No crash. I read a bunch of articles about this issue, nothing really related. Dangit, I&rsquo;d have to take a look again at all the code.
+Read it all. Nothing weird.</p>
+
+<p>Great, what next. I could try to apply changes file by file, smallest feature at a time, and test the application. But it could take way too much time, and every time the AVD crashes, I&rsquo;d need to restart it all, or the snapshot used by the AVD would just stay stuck on the error like my phone did.</p>
+
+<p>So, guess what piece of code could break your whole application and make your phone crash in the less explicit way. A damn logo. Made on Illustrator, it was a 6MB one. My friend never had the smallest issue with its OnePlus One, but I could reproduce it with both my real Moto G 4G, and my AVD&rsquo;s (a Nexus 4, a Galaxy Nexus and a Nexus 5). It&rsquo;s possible the OnePlus One was able to handle this with its 3 GB of RAM or its Cyanogenmod ROM.
+2 things made me realise it could come from the drawables. First, I was sure the code was right after reading it multiple times. Second, the issue was only happening when I tried to go outside the app. What&rsquo;s both part of an application and out of it ? My only guess was the logo.</p>
+
+<p>I do blame Android for its (really) poor exception/stacktrace, and for not being able to handle this issue AT ALL on these devices. Losing its data because of a logo is quite a frustrating experience.</p>
+
+<p>So yeah, TLDR : Check your drawables size. A drawable too heavy <em>may</em> crash your device with nothing but nonsense in the Android Monitor.</p>
+
+                </section>
+            </article>
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> else{break}
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://elsebreak.info/js/jquery-2.2.4.min.js"></script>
+<script src="http://elsebreak.info/js/main.js"></script>
+<script src="http://elsebreak.info/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_code', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

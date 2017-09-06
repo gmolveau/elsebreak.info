@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vagrant on else{break}</title>
+    <link>http://elsebreak.info/tags/vagrant/</link>
+    <description>Recent content in Vagrant on else{break}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://elsebreak.info/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vagrant : Several issues I ran into</title>
+      <link>http://elsebreak.info/post/vagrant-several-issues/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/vagrant-several-issues/</guid>
+      <description>Lost association with VM (VirtualBox) :
+Running vagrant up isn&amp;rsquo;t bringing up a previously created VM but is creating a new one.
+vagrant status reports that no vm is created yet, while VirtualBox shows it still exists.
+Solution : A great post about this issue is the one from mobmad: https://github.com/mitchellh/vagrant/issues/1755
+First, get the hash of your vm with the following command : VBoxManage list vms
+If VBoxManage is not in your path, it should be something like C:\Program Files\Oracle\VirtualBox\VBoxManage.</description>
+    </item>
+    
+  </channel>
+</rss>
