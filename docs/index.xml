@@ -6,30 +6,78 @@
     <description>Recent content on else{break}</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://elsebreak.info/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>http://elsebreak.info/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Letsencrypt errors with new apache2 virtualhosts</title>
+      <link>http://elsebreak.info/post/letsencrypt-apache2-errors/</link>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://elsebreak.info/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <guid>http://elsebreak.info/post/letsencrypt-apache2-errors/</guid>
+      <description>I wanted to use letsencrypt on new virtualhosts with apache2 that didn&amp;rsquo;t have any certificates.
+I encountered all these errors &amp;hellip; - The server could not connect to the client to verify the domain :: Failed to connect to x.x.x.x:443 for TLS-SNI-01 challenge
+- Server only speaks HTTP, not TLS
+- MisconfigurationError: Error while running apache2ctl graceful.
+- AH00112: Warning: DocumentRoot [/var/lib/letsencrypt/tls_sni_01_page/] does not exist
+but these errors can be avoided 99% of the time by checking the following</description>
     </item>
     
     <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>http://elsebreak.info/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <title>deploy an openvpn server with docker</title>
+      <link>http://elsebreak.info/post/deploy-openvpn-docker/</link>
+      <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://elsebreak.info/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>http://elsebreak.info/post/deploy-openvpn-docker/</guid>
+      <description>extracted from : http://samwize.com/2016/09/10/setup-your-own-vpn-with-docker-openvpn-and-digital-ocean/ and : https://github.com/giggio/docker-openvpn-arm
+for arm-based VPS OVPN_DATA=&amp;quot;ovpn-data&amp;quot; docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm giggio/openvpn-arm ovpn_genconfig -u udp://IP_ADRESS_OR_DOMAIN  The next step will ask you to enter a password.
+docker run -v $OVPN_DATA:/etc/openvpn --rm -it giggio/openvpn-arm ovpn_initpki nopass docker run -v $OVPN_DATA:/etc/openvpn -d --name openvpn -p 1194:1194/udp --cap-add=NET_ADMIN giggio/openvpn-arm docker run -v $OVPN_DATA:/etc/openvpn --rm -it giggio/openvpn-arm easyrsa build-client-full USERNAME nopass docker run -v $OVPN_DATA:/etc/openvpn --rm giggio/openvpn-arm ovpn_getclient USERNAME &amp;gt; USERNAME.</description>
+    </item>
+    
+    <item>
+      <title>Ionic - Datepicker &amp; Android</title>
+      <link>http://elsebreak.info/post/ionic-date-picker-android/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/ionic-date-picker-android/</guid>
+      <description>After struggling a bit on how to implement a nice looking datepicker with Ionic, I thought I&amp;rsquo;d share some details here.
+After reading a few articles, I was left with two possibilities, using a plugin (there&amp;rsquo;s a bunch of cordova ones) which would add dependencies and require to code a little, or simply using HTML5 &amp;lt;input type=&amp;quot;date&amp;quot; /&amp;gt; which seemed to be nicely supported on most mobile browsers, using the mobile&amp;rsquo;s native ui.</description>
+    </item>
+    
+    <item>
+      <title>Vagrant : Several issues I ran into</title>
+      <link>http://elsebreak.info/post/vagrant-several-issues/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/vagrant-several-issues/</guid>
+      <description>Lost association with VM (VirtualBox) :
+Running vagrant up isn&amp;rsquo;t bringing up a previously created VM but is creating a new one.
+vagrant status reports that no vm is created yet, while VirtualBox shows it still exists.
+Solution : A great post about this issue is the one from mobmad: https://github.com/mitchellh/vagrant/issues/1755
+First, get the hash of your vm with the following command : VBoxManage list vms
+If VBoxManage is not in your path, it should be something like C:\Program Files\Oracle\VirtualBox\VBoxManage.</description>
+    </item>
+    
+    <item>
+      <title>Android Dev - System UI has stopped working</title>
+      <link>http://elsebreak.info/post/android-dev-system-ui/</link>
+      <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/android-dev-system-ui/</guid>
+      <description>Alright, my first post will be about something that took me way too much time to fix. Find a TLDR version at the end of it.
+For about a month or so I&amp;rsquo;ve been working on an Android/REST project. Working with people that were new to Android, I had a great pleasure letting them doing things that bores me, like XML layouts, and basic design - including creating background images, and a logo.</description>
+    </item>
+    
+    <item>
+      <title>Issue with npm and 5$ DigitalOcean VPS</title>
+      <link>http://elsebreak.info/post/npm-issue-ghost/</link>
+      <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/npm-issue-ghost/</guid>
+      <description>I had an issue with my docker ghost blog, it kept being killed for no reason&amp;hellip;
+GET /robots.txt 200 16.540 ms - - GET / 200 160.595 ms - - Killed npm ERR! Linux 3.16.0-4-amd64 npm ERR! argv &amp;quot;node&amp;quot; &amp;quot;/usr/local/bin/npm&amp;quot; &amp;quot;start&amp;quot; npm ERR! node v0.10.40 npm ERR! npm v2.14.1 npm ERR! code ELIFECYCLE  So I tried to debug npm and found that it has an issue with low ram, so a solution is to increase the swap size.</description>
     </item>
     
     <item>
@@ -54,6 +102,17 @@ More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
  Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>http://elsebreak.info/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/post/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>

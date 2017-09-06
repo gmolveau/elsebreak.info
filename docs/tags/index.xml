@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Android</title>
+      <link>http://elsebreak.info/tags/android/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache2</title>
+      <link>http://elsebreak.info/tags/apache2/</link>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/apache2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Development</title>
       <link>http://elsebreak.info/tags/development/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
@@ -21,11 +39,38 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>http://elsebreak.info/tags/docker/</link>
+      <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ghost</title>
+      <link>http://elsebreak.info/tags/ghost/</link>
+      <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/ghost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Go</title>
       <link>http://elsebreak.info/tags/go/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>http://elsebreak.info/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gohugo</title>
+      <link>http://elsebreak.info/tags/gohugo/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/gohugo/</guid>
       <description></description>
     </item>
     
@@ -48,6 +93,69 @@
     </item>
     
     <item>
+      <title>Ionic</title>
+      <link>http://elsebreak.info/tags/ionic/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/ionic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jekyll</title>
+      <link>http://elsebreak.info/tags/jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Letsencrypt</title>
+      <link>http://elsebreak.info/tags/letsencrypt/</link>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/letsencrypt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Migrate</title>
+      <link>http://elsebreak.info/tags/migrate/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/migrate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Npm</title>
+      <link>http://elsebreak.info/tags/npm/</link>
+      <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Openvpn</title>
+      <link>http://elsebreak.info/tags/openvpn/</link>
+      <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/openvpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System Ui</title>
+      <link>http://elsebreak.info/tags/system-ui/</link>
+      <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/system-ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Templates</title>
       <link>http://elsebreak.info/tags/templates/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
@@ -62,6 +170,15 @@
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>http://elsebreak.info/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vagrant</title>
+      <link>http://elsebreak.info/tags/vagrant/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://elsebreak.info/tags/vagrant/</guid>
       <description></description>
     </item>
     
