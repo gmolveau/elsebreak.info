@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openvpn on else{break}</title>
-    <link>http://elsebreak.info/tags/openvpn/</link>
+    <link>http://www.elsebreak.info/tags/openvpn/</link>
     <description>Recent content in Openvpn on else{break}</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 07 Nov 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://elsebreak.info/tags/openvpn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.elsebreak.info/tags/openvpn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>deploy an openvpn server with docker</title>
-      <link>http://elsebreak.info/post/deploy-openvpn-docker/</link>
+      <link>http://www.elsebreak.info/post/deploy-openvpn-docker/</link>
       <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://elsebreak.info/post/deploy-openvpn-docker/</guid>
+      <guid>http://www.elsebreak.info/post/deploy-openvpn-docker/</guid>
       <description>extracted from : http://samwize.com/2016/09/10/setup-your-own-vpn-with-docker-openvpn-and-digital-ocean/ and : https://github.com/giggio/docker-openvpn-arm
 for arm-based VPS OVPN_DATA=&amp;quot;ovpn-data&amp;quot; docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm giggio/openvpn-arm ovpn_genconfig -u udp://IP_ADRESS_OR_DOMAIN  The next step will ask you to enter a password.
 docker run -v $OVPN_DATA:/etc/openvpn --rm -it giggio/openvpn-arm ovpn_initpki nopass docker run -v $OVPN_DATA:/etc/openvpn -d --name openvpn -p 1194:1194/udp --cap-add=NET_ADMIN giggio/openvpn-arm docker run -v $OVPN_DATA:/etc/openvpn --rm -it giggio/openvpn-arm easyrsa build-client-full USERNAME nopass docker run -v $OVPN_DATA:/etc/openvpn --rm giggio/openvpn-arm ovpn_getclient USERNAME &amp;gt; USERNAME.</description>

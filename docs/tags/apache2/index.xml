@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apache2 on else{break}</title>
-    <link>http://elsebreak.info/tags/apache2/</link>
+    <link>http://www.elsebreak.info/tags/apache2/</link>
     <description>Recent content in Apache2 on else{break}</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 31 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://elsebreak.info/tags/apache2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.elsebreak.info/tags/apache2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Letsencrypt errors with new apache2 virtualhosts</title>
-      <link>http://elsebreak.info/post/letsencrypt-apache2-errors/</link>
+      <link>http://www.elsebreak.info/post/letsencrypt-apache2-errors/</link>
       <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://elsebreak.info/post/letsencrypt-apache2-errors/</guid>
+      <guid>http://www.elsebreak.info/post/letsencrypt-apache2-errors/</guid>
       <description>I wanted to use letsencrypt on new virtualhosts with apache2 that didn&amp;rsquo;t have any certificates.
 I encountered all these errors &amp;hellip; - The server could not connect to the client to verify the domain :: Failed to connect to x.x.x.x:443 for TLS-SNI-01 challenge
 - Server only speaks HTTP, not TLS
