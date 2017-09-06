@@ -1,0 +1,55 @@
+# Site settings
+baseurl = "http://elsebreak.info/"
+# HTML Language Code Reference, such as en, zh-cn
+languageCode = "en"
+title = "else{break}"
+theme = "cactus"
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = "your_google_analytics_code"
+hasCJKLanguage = true
+
+[params]
+	name = "else{break}"
+	description = "IT articles and experiences"
+	bio = "IT stuffs and #doge"
+
+	enableRSS = true
+
+	### DISQUS
+	# Disqus comment
+	disqusShortname = "your_disqus_short_name"
+	# Disable disqus comments by set `enableDisqus = "false"`
+	enableDisqus = false
+
+	# Enable googleAnalytics
+	enableGoogleAnalytics = true
+
+	# Add custom assets with their paths relative to the static folder
+	customCSS = []
+	customJS  = []
+
+	# The variables below are optionally too and can be used to
+	# translate or customize each string of the theme.
+
+	# Navigation links
+	home = ""
+	about = ""
+	archive = ""
+	subscribe = ""
+	tags = ""
+	# Pagination links
+	olderPosts = ""
+	newerPosts = ""
+	readMore = ""
+	copyright = ""
+	# Sharing options and author information in posts
+	aboutAuthor = "I am so interesting."
+	tweet = ""
+	share = ""
+	# 404 page
+	title404 = "OMG WTF 404 noe plz"
+	subtitle404 = "404 error page idgaf"
+
+	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
+	iconFont = "font-awesome"
