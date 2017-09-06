@@ -1,4 +1,5 @@
 +++
+author = "teub"
 title = "(Hu)go Template Primer"
 description = "Hugo uses the excellent go library for its template engine. "
 tags = [
@@ -14,6 +15,7 @@ categories = [
     "golang",
 ]
 menu = "main"
+hidden = true
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for

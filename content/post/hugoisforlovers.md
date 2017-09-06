@@ -1,4 +1,5 @@
 +++
+author = "teub"
 title = "Getting Started with Hugo"
 description = "Goto hugo releases and download the appropriate version for your os and architecture."
 tags = [
@@ -13,6 +14,7 @@ categories = [
     "golang",
 ]
 menu = "main"
+hidden = true
 +++
 
 ## Step 1. Install Hugo
