@@ -13,10 +13,10 @@
     
     <item>
       <title>Issue with npm and 5$ DigitalOcean VPS</title>
-      <link>http://www.elsebreak.info/post/npm-issue-ghost/</link>
+      <link>http://www.elsebreak.info/post/gregoire/npm-issue-ghost/</link>
       <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.elsebreak.info/post/npm-issue-ghost/</guid>
+      <guid>http://www.elsebreak.info/post/gregoire/npm-issue-ghost/</guid>
       <description>I had an issue with my docker ghost blog, it kept being killed for no reason&amp;hellip;
 GET /robots.txt 200 16.540 ms - - GET / 200 160.595 ms - - Killed npm ERR! Linux 3.16.0-4-amd64 npm ERR! argv &amp;quot;node&amp;quot; &amp;quot;/usr/local/bin/npm&amp;quot; &amp;quot;start&amp;quot; npm ERR! node v0.10.40 npm ERR! npm v2.14.1 npm ERR! code ELIFECYCLE  So I tried to debug npm and found that it has an issue with low ram, so a solution is to increase the swap size.</description>
     </item>

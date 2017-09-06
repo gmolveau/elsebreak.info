@@ -13,10 +13,10 @@
     
     <item>
       <title>Ionic - Datepicker &amp; Android</title>
-      <link>http://www.elsebreak.info/post/ionic-date-picker-android/</link>
+      <link>http://www.elsebreak.info/post/christophe/ionic-date-picker-android/</link>
       <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.elsebreak.info/post/ionic-date-picker-android/</guid>
+      <guid>http://www.elsebreak.info/post/christophe/ionic-date-picker-android/</guid>
       <description>After struggling a bit on how to implement a nice looking datepicker with Ionic, I thought I&amp;rsquo;d share some details here.
 After reading a few articles, I was left with two possibilities, using a plugin (there&amp;rsquo;s a bunch of cordova ones) which would add dependencies and require to code a little, or simply using HTML5 &amp;lt;input type=&amp;quot;date&amp;quot; /&amp;gt; which seemed to be nicely supported on most mobile browsers, using the mobile&amp;rsquo;s native ui.</description>
     </item>

@@ -1,0 +1,132 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="else{break}">
+		<meta name="description" content="IT articles and experiences">
+		<meta name="generator" content="Hugo 0.26" />
+		<title>Ionic - Datepicker &amp; Android &middot; else{break}</title>
+		<link rel="shortcut icon" href="http://www.elsebreak.info/images/favicon.ico">
+		<link rel="stylesheet" href="http://www.elsebreak.info/css/style.css">
+		<link rel="stylesheet" href="http://www.elsebreak.info/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://www.elsebreak.info/css/font-awesome.min.css">
+		
+
+		
+		<link href="http://www.elsebreak.info/index.xml" rel="alternate" type="application/rss+xml" title="else{break}" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://www.elsebreak.info/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='http://www.elsebreak.info/post'>Archive</a>
+	<a href='http://www.elsebreak.info/tags'>Tags</a>
+	<a href='http://www.elsebreak.info/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="http://www.elsebreak.info/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Ionic - Datepicker &amp; Android
+                    </h1>
+                    <h3>by Christophe DOUY</h3>
+                    <h2 class="headline">
+                    Feb 23, 2016 00:00
+                    · 248 words
+                    · 2 minutes read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="http://www.elsebreak.info/tags/ionic">ionic</a>
+                          
+                              <a href="http://www.elsebreak.info/tags/android">android</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>After struggling a bit on how to implement a nice looking datepicker with Ionic, I thought I&rsquo;d share some details here.</p>
+
+<p>After reading a few articles, I was left with two possibilities, using a plugin (there&rsquo;s a bunch of cordova ones) which would add dependencies and require to code a little, or simply using HTML5 <code>&lt;input type=&quot;date&quot; /&gt;</code> which seemed to be nicely supported on most mobile browsers, using the mobile&rsquo;s native ui. So here I am, simply adding my HTML line, and launching my app on a 5.2 Android device.</p>
+
+<p>Oh snap.
+<img src="https://i.stack.imgur.com/nGbEi.png">
+What happened ? I get the Android 2.x datepicker ui , which is really not what I hoped for. I check that my phone responds well with regular websites&rsquo; <code>&lt;input type=&quot;date&quot; /&gt;</code>, and it correctly renders the native datepicker. I try to update cordova &amp; ionic, tweak a bit the targetSDKVersion and stuff, but nothing works.</p>
+
+<p>After googling a bit (a lot&hellip;) and ignoring most posts which are a few years old and telling to use a cordova plugin, I finally found a solution :
+<a href="https://forum.ionicframework.com/t/building-a-date-picker-in-ionic-input-type-data-we-get-android-2-3-style-datepicker/27477/3">https://forum.ionicframework.com/t/building-a-date-picker-in-ionic-input-type-data-we-get-android-2-3-style-datepicker/27477/3</a></p>
+
+<p>So, <strong>TLDR version</strong>:
+Datepicker is not rendering properly on Android ?
+&gt;<em><code>mhartington - Ionic Team</code></em>
+&gt;
+This can be fixed by opening platforms/android/AndroidManifest.xml, and removing this
+<code>android:theme=&quot;@android:style/Theme.Black.NoTitleBar&quot;</code></p>
+
+<p>As fredericoramos said, I think it should be specified somewhere in the docs. Nonetheless, I find Ionic to be a really great framework (best one I&rsquo;ve been using so far for developping web apps), and hope to try out Ionic 2 soon.</p>
+
+                </section>
+            </article>
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> else{break}
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://www.elsebreak.info/js/jquery-2.2.4.min.js"></script>
+<script src="http://www.elsebreak.info/js/main.js"></script>
+<script src="http://www.elsebreak.info/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-70151012-4', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
