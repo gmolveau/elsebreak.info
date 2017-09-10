@@ -51,7 +51,6 @@ hasCJKLanguage = true
 	share = ""
 	# 404 page
 	title404 = "OMG WTF 404 noe plz"
-	subtitle404 = "404 error page idgaf"
 
 	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
 	iconFont = "font-awesome"
