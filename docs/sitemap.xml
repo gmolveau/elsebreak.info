@@ -75,13 +75,13 @@
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/categories/development/</loc>
+    <loc>http://www.elsebreak.info/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/development/</loc>
+    <loc>http://www.elsebreak.info/categories/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -111,13 +111,13 @@
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/categories/golang/</loc>
+    <loc>http://www.elsebreak.info/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/golang/</loc>
+    <loc>http://www.elsebreak.info/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

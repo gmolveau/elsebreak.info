@@ -4,12 +4,14 @@ title = "About"
 hidden = true
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ullam earum dolorum! Sed, perspiciatis.
+***
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+### Christophe DOUY &middot; [<i class="fa fa-twitter" style="color:#bbb" aria-hidden="true"></i>](https://twitter.com/douy_c) [<i class="fa fa-github" style="color:#bbb" aria-hidden="true"></i>](https://github.com/Farael49) [<i class="fa fa-linkedin" style="color:#bbb" aria-hidden="true"></i>](https://www.linkedin.com/in/cdouy/) [<i class="fa fa-envelope" style="color:#bbb" aria-hidden="true"></i>](mailto:christophe.douy49@gmail.com)
+
+IT dev and stuff, Java
 
 ***
 
-### Lorem ipsum dolor.
+### Grégoire MOLVEAU &middot; [<i class="fa fa-twitter" style="color:#bbb" aria-hidden="true"></i>](https://twitter.com/GregoireMolveau) [<i class="fa fa-github" style="color:#bbb" aria-hidden="true"></i>](https://github.com/gmolveau) [<i class="fa fa-linkedin" style="color:#bbb" aria-hidden="true"></i>](https://www.linkedin.com/in/gregoiremolveau/) [<i class="fa fa-envelope" style="color:#bbb" aria-hidden="true"></i>](mailto:gregoire.molveau@gmail.com)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dicta corporis ad inventore itaque impedit dolor atque amet exercitationem! Veniam qui voluptas maiores vel laudantium necessitatibus, velit ducimus! Iste hic facere, accusamus fugiat enim facilis.
+French IT Security Student @ [ENSIBS](http://www-ensibs.univ-ubs.fr/fr/formations/formations-d-ingenieurs/cyberdefense.html)
