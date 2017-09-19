@@ -12,6 +12,6 @@ IT dev and stuff, Java
 
 ***
 
-### Grégoire MOLVEAU &middot; [<i class="fa fa-twitter" style="color:#bbb" aria-hidden="true"></i>](https://twitter.com/GregoireMolveau) [<i class="fa fa-github" style="color:#bbb" aria-hidden="true"></i>](https://github.com/gmolveau) [<i class="fa fa-linkedin" style="color:#bbb" aria-hidden="true"></i>](https://www.linkedin.com/in/gregoiremolveau/) [<i class="fa fa-envelope" style="color:#bbb" aria-hidden="true"></i>](mailto:gregoire.molveau@gmail.com)
+### Grégoire MOLVEAU &middot; [<i class="fa fa-twitter" style="color:#bbb" aria-hidden="true"></i>](https://twitter.com/GregoireMolveau) [<i class="fa fa-github" style="color:#bbb" aria-hidden="true"></i>](https://github.com/gmolveau) [<i class="fa fa-linkedin" style="color:#bbb" aria-hidden="true"></i>](https://www.linkedin.com/in/gregoiremolveau/) [<i class="fa fa-envelope" style="color:#bbb" aria-hidden="true"></i>](mailto:gregoire.molveau@gmail.com) [<i class="fa fa-home" style="color:#bbb" aria-hidden="true"></i>](http://gregoire.molveau.fr/)
 
 French IT Security Student @ [ENSIBS](http://www-ensibs.univ-ubs.fr/fr/formations/formations-d-ingenieurs/cyberdefense.html)
