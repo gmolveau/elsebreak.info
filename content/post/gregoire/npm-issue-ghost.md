@@ -10,9 +10,9 @@ date = "2015-11-13"
 menu = "main"
 +++
 
-I had an issue with my docker ghost blog, it kept being killed for no reason...
+I had an issue with my docker ghost blog, it kept being killed for no reason...  
 
-```language-bash
+```bash
 GET /robots.txt 200 16.540 ms - -
 GET / 200 160.595 ms - -
 Killed
@@ -26,22 +26,21 @@ npm ERR! code ELIFECYCLE
 
 So I tried to debug npm and found that it has an issue with low ram, so a solution is to increase the swap size.
 
-Here's how to fix it :
+Here's how to fix it :  
 
-
-```language-bash
+```bash
 swapoff -a
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k 
 chmod 0600 /swapfile
 mkswap /swapfile
 nano /etc/fstab
 ```
-and add this line :
-```language-bash
+and add this line :  
+```bash
 /swapfile swap swap defaults 0 0
 ```
-then re-enable the swap
-```language-bash
+then re-enable the swap. 
+```bash
 swapon -a
 ```
 

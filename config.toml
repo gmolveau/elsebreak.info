@@ -18,11 +18,9 @@ hasCJKLanguage = true
 
 	enableRSS = true
 
-	### DISQUS
-	# Disqus comment
-	disqusShortname = "your_disqus_short_name"
-	# Disable disqus comments by set `enableDisqus = "false"`
-	enableDisqus = false
+	### Github Comments via Issues
+	enableGithubComments = true
+	repoName = "gmolveau/elsebreak.info"
 
 	# Enable googleAnalytics
 	enableGoogleAnalytics = true

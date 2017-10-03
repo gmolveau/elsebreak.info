@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -22,8 +22,8 @@
 		
 	</head>
 
-    <body>
-       <nav class="main-nav">
+  <body>
+    <nav class="main-nav">
 	
 	
 		<a href='http://www.elsebreak.info/'> <span class="arrow">←</span>Home</a>
@@ -39,36 +39,28 @@
 	
 </nav>
 
-
-        <section id="wrapper">
-            <article class="post">
-                <header>
-                    <h1>
-                        Letsencrypt errors with new apache2 virtualhosts
-                    </h1>
-                    <h3>by Grégoire MOLVEAU</h3>
-                    <h2 class="headline">
-                    31 January 2017
-                    · 140 words
-                    · 1 minute read
-                      <span class="tags">
-                      
-                      
-                          
-                              <a href="http://www.elsebreak.info/tags/apache2">apache2</a>
-                          
-                              <a href="http://www.elsebreak.info/tags/letsencrypt">letsencrypt</a>
-                          
-                      
-                      
-                      </span>
-                    </h2>
-                </header>
+    <section id="wrapper">
+      <article class="post">
+        <header>
+          <h1>Letsencrypt errors with new apache2 virtualhosts</h1>
+          <h3>by Grégoire MOLVEAU</h3>
+          <h2 class="headline">
+            31 January 2017
+            · 136 words
+            · 1 minute read
+            <span class="tags">
+              
                 
-                <section id="post-body">
-                    <p>I wanted to use letsencrypt on new virtualhosts with apache2 that didn&rsquo;t have any certificates.</p>
+                  <a href="http://www.elsebreak.info/tags/apache2">apache2</a><a href="http://www.elsebreak.info/tags/letsencrypt">letsencrypt</a>
+                
+              
+            </span>
+          </h2>
+        </header>
+        
+        <section id="post-body"><p>I wanted to use letsencrypt on new virtualhosts with apache2 that didn&rsquo;t have any certificates.</p>
 
-<p>I encountered all these errors &hellip;
+<p>I encountered all these errors &hellip;<br />
 - <code>The server could not connect to the client to verify the domain :: Failed to connect to x.x.x.x:443 for TLS-SNI-01 challenge</code><br />
 - <code>Server only speaks HTTP, not TLS</code><br />
 - <code>MisconfigurationError: Error while running apache2ctl graceful.</code><br />
@@ -78,37 +70,121 @@
 <p>but these errors can be avoided 99% of the time by checking the following</p>
 
 <ul>
-<li>check that you have mod_ssl enabled :
-<code>bash
-sudo a2enmod ssl
-</code></li>
-<li>make sure that your virtualhost files have these lines :
-<code>ApacheConf
-&lt;IfModule mod_ssl.c&gt;
-&lt;VirtualHost *:443&gt;
-[...]
-SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
-SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
-Include /etc/letsencrypt/options-ssl-apache.conf
-&lt;/VirtualHost&gt;
-</code></li>
-<li>check that your firewall is accepting port 443 :
-<code>bash
-sudo ufw allow 443
-</code></li>
-<li>apache configuration is correct :
-<code>bash
-sudo service apache2 reload
-sudo apachectl -t
-</code></li>
+<li>check that you have mod_ssl enabled :<br /></li>
 </ul>
 
-                </section>
-            </article>
+<pre><code class="language-bash">sudo a2enmod ssl
+</code></pre>
 
-            
+<ul>
+<li>make sure that your virtualhost files have these lines :<br /></li>
+</ul>
 
-            <footer id="footer">
+<pre><code class="language-bash">&lt;IfModule mod_ssl.c&gt;
+&lt;VirtualHost *:443&gt;
+    [...]
+    SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
+    SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+    Include /etc/letsencrypt/options-ssl-apache.conf
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<ul>
+<li>check that your firewall is accepting port 443 :<br /></li>
+</ul>
+
+<pre><code class="language-bash"> sudo ufw allow 443
+</code></pre>
+
+<ul>
+<li>apache configuration is correct :<br /></li>
+</ul>
+
+<pre><code class="language-bash">sudo service apache2 reload
+sudo apachectl -t
+</code></pre>
+</section>
+        <hr>
+        
+          <div id="gh-comments">
+    <header>
+        <h4>COMMENTS</h4>
+    </header>
+    <div id="gh-comments-list"></div>
+    <a href="javascript:void(0)" id="gh-load-comments" class="btn" style="display:none">Load more comments</a>
+</div>
+
+<script type="text/javascript">
+
+
+var CurrentPage = 0;
+function ParseLinkHeader(entries){
+    var links = { };
+    for (var i in entries){
+        var entry = entries[i];
+        var link = { };
+        link.name = entry.match(/rel=\"([^\"]*)/)[1];
+        link.url = entry.match(/<([^>]*)/)[1];
+        link.page = entry.match(/page=(\d+).*$/)[1];
+        links[link.name] = link;
+    }
+    return links;
+}
+function DoGithubComments(comment_id, page_id){
+
+    if (page_id === undefined)
+        page_id = 1;
+
+    var api_url = "https://api.github.com/repos/gmolveau\/elsebreak.info";
+    var api_issue_url = api_url + "/issues/" + comment_id;
+    var api_comments_url = api_url + "/issues/" + comment_id + "/comments" + "?page=" + page_id;
+
+    var url = "https://github.com/gmolveau\/elsebreak.info/issues/" + comment_id;
+
+    document.addEventListener('DOMContentLoaded', function(){ 
+        $.getJSON(api_issue_url, function(data) {
+            NbComments = data.comments;
+        });
+        $.ajax(api_comments_url, {
+            headers: {Accept: "application/vnd.github.v3.html+json"},
+            dataType: "json",
+            success: function(comments, textStatus, jqXHR) {
+                
+                if (page_id == 1)
+                    $("#gh-comments > header").append("<a href='" + url + "#new_comment_field' rel='nofollow' target='_new' class='btn'>Post a comment on Github</a>");
+                
+                $.each(comments, function(i, comment) {
+                    var m = new Date(comment.created_at);
+                    var dateString = m.getUTCFullYear() +"/"+ (m.getUTCMonth()+1) +"/"+ m.getUTCDate() + " at " + m.getUTCHours() + ":" + m.getUTCMinutes();
+                    var t = "<div class='gh-comment'><div>";
+                    t += "<img src='" + comment.user.avatar_url + "'>";
+                    t += "<b><a href='" + comment.user.html_url + "'>" + comment.user.login + "</a></b>";
+                    t += " posted on ";
+                    t += "<em>" + dateString + "</em></div>";
+                    t += comment.body_html;
+                    t += "</div>";
+                    $("#gh-comments-list").append(t);
+                });
+                
+                var links = ParseLinkHeader(jqXHR.getAllResponseHeaders().responseJSON);
+                if ("next" in links){
+                    $("#gh-load-comments").attr("onclick", "DoGithubComments(" + comment_id + "," + (page_id + 1) + ");");
+                    $("#gh-load-comments").show();
+                }else{
+                    $("#gh-load-comments").hide();
+                }
+            },
+            error: function() {
+                $("#gh-comments-list").append("Comments are not open for this post yet.");
+            }
+        });
+    }, false);
+}
+DoGithubComments( 1 );
+</script>
+        
+      </article>
+      <footer id="footer">
     
     <p class="small">
     
@@ -123,9 +199,8 @@ sudo apachectl -t
     </p>
 </footer>
 
-        </section>
-
-        <script src="http://www.elsebreak.info/js/jquery-2.2.4.min.js"></script>
+    </section>
+    <script src="http://www.elsebreak.info/js/jquery-2.2.4.min.js"></script>
 <script src="http://www.elsebreak.info/js/main.js"></script>
 <script src="http://www.elsebreak.info/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -146,7 +221,5 @@ ga('send', 'pageview');
 
 
 
-
-
-    </body>
+  </body>
 </html>
