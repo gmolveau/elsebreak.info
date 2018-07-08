@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android on else{break}</title>
-    <link>http://www.elsebreak.info/tags/android/</link>
+    <link>https://www.elsebreak.info/tags/android/</link>
     <description>Recent content in Android on else{break}</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 23 Feb 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.elsebreak.info/tags/android/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.elsebreak.info/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ionic - Datepicker &amp; Android</title>
-      <link>http://www.elsebreak.info/post/christophe/ionic-date-picker-android/</link>
+      <link>https://www.elsebreak.info/post/christophe/ionic-date-picker-android/</link>
       <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.elsebreak.info/post/christophe/ionic-date-picker-android/</guid>
+      <guid>https://www.elsebreak.info/post/christophe/ionic-date-picker-android/</guid>
       <description>After struggling a bit on how to implement a nice looking datepicker with Ionic, I thought I&amp;rsquo;d share some details here.
 After reading a few articles, I was left with two possibilities, using a plugin (there&amp;rsquo;s a bunch of cordova ones) which would add dependencies and require to code a little, or simply using HTML5 &amp;lt;input type=&amp;quot;date&amp;quot; /&amp;gt; which seemed to be nicely supported on most mobile browsers, using the mobile&amp;rsquo;s native ui.</description>
     </item>
     
     <item>
       <title>Android Dev - System UI has stopped working</title>
-      <link>http://www.elsebreak.info/post/christophe/android-dev-system-ui/</link>
+      <link>https://www.elsebreak.info/post/christophe/android-dev-system-ui/</link>
       <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.elsebreak.info/post/christophe/android-dev-system-ui/</guid>
+      <guid>https://www.elsebreak.info/post/christophe/android-dev-system-ui/</guid>
       <description>Alright, my first post will be about something that took me way too much time to fix. Find a TLDR version at the end of it.
 For about a month or so I&amp;rsquo;ve been working on an Android/REST project. Working with people that were new to Android, I had a great pleasure letting them doing things that bores me, like XML layouts, and basic design - including creating background images, and a logo.</description>
     </item>

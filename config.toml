@@ -1,7 +1,7 @@
 publishDir = "docs"
 
 # Site settings
-baseurl = "http://www.elsebreak.info/"
+baseurl = "https://www.elsebreak.info/"
 # HTML Language Code Reference, such as en, zh-cn
 languageCode = "en"
 title = "else{break}"

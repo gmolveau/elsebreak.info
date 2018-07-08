@@ -3,199 +3,199 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.elsebreak.info/post/gregoire/letsencrypt-apache2-errors/</loc>
+    <loc>https://www.elsebreak.info/post/gregoire/letsencrypt-apache2-errors/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/gregoire/deploy-openvpn-docker/</loc>
+    <loc>https://www.elsebreak.info/post/gregoire/deploy-openvpn-docker/</loc>
     <lastmod>2016-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/christophe/ionic-date-picker-android/</loc>
+    <loc>https://www.elsebreak.info/post/christophe/ionic-date-picker-android/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/christophe/vagrant-several-issues/</loc>
+    <loc>https://www.elsebreak.info/post/christophe/vagrant-several-issues/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/christophe/android-dev-system-ui/</loc>
+    <loc>https://www.elsebreak.info/post/christophe/android-dev-system-ui/</loc>
     <lastmod>2015-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/gregoire/npm-issue-ghost/</loc>
+    <loc>https://www.elsebreak.info/post/gregoire/npm-issue-ghost/</loc>
     <lastmod>2015-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/about/</loc>
+    <loc>https://www.elsebreak.info/about/</loc>
     <lastmod>2015-06-20T14:02:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/</loc>
+    <loc>https://www.elsebreak.info/tags/</loc>
     <lastmod>2015-06-20T14:02:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/examples/goisforlovers/</loc>
+    <loc>https://www.elsebreak.info/post/examples/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/examples/hugoisforlovers/</loc>
+    <loc>https://www.elsebreak.info/post/examples/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/examples/migrate-from-jekyll/</loc>
+    <loc>https://www.elsebreak.info/post/examples/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/android/</loc>
+    <loc>https://www.elsebreak.info/tags/android/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/apache2/</loc>
+    <loc>https://www.elsebreak.info/tags/apache2/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/categories/</loc>
+    <loc>https://www.elsebreak.info/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/development/</loc>
+    <loc>https://www.elsebreak.info/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/categories/development/</loc>
+    <loc>https://www.elsebreak.info/categories/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/docker/</loc>
+    <loc>https://www.elsebreak.info/tags/docker/</loc>
     <lastmod>2016-11-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/ghost/</loc>
+    <loc>https://www.elsebreak.info/tags/ghost/</loc>
     <lastmod>2015-11-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/go/</loc>
+    <loc>https://www.elsebreak.info/tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/gohugo/</loc>
+    <loc>https://www.elsebreak.info/tags/gohugo/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/golang/</loc>
+    <loc>https://www.elsebreak.info/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/categories/golang/</loc>
+    <loc>https://www.elsebreak.info/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/hugo/</loc>
+    <loc>https://www.elsebreak.info/tags/hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/ionic/</loc>
+    <loc>https://www.elsebreak.info/tags/ionic/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/jekyll/</loc>
+    <loc>https://www.elsebreak.info/tags/jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/letsencrypt/</loc>
+    <loc>https://www.elsebreak.info/tags/letsencrypt/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/migrate/</loc>
+    <loc>https://www.elsebreak.info/tags/migrate/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/npm/</loc>
+    <loc>https://www.elsebreak.info/tags/npm/</loc>
     <lastmod>2015-11-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/openvpn/</loc>
+    <loc>https://www.elsebreak.info/tags/openvpn/</loc>
     <lastmod>2016-11-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/post/</loc>
+    <loc>https://www.elsebreak.info/post/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/system-ui/</loc>
+    <loc>https://www.elsebreak.info/tags/system-ui/</loc>
     <lastmod>2015-11-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/templates/</loc>
+    <loc>https://www.elsebreak.info/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/themes/</loc>
+    <loc>https://www.elsebreak.info/tags/themes/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/tags/vagrant/</loc>
+    <loc>https://www.elsebreak.info/tags/vagrant/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.elsebreak.info/</loc>
+    <loc>https://www.elsebreak.info/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
